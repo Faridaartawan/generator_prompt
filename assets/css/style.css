@@ -62,16 +62,27 @@ body {
 }
 
 /* Hero Section */
+.hero-section {
+  background-color: #000;
+  position: relative;
+  padding: 2rem 0;
+}
+
 .hero {
-  background: url('../img/hero-image.webp') no-repeat center center/cover;
+  background: url('../img/hero-image.jpg') no-repeat center center/cover;
   color: white;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 .hero::before {
@@ -137,5 +148,12 @@ body {
 
   .container {
     padding: 0 1rem;
+  }
+
+  .hero {
+    border-radius: 0;
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
   }
 }
