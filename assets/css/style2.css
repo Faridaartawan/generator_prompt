@@ -35,6 +35,7 @@ body.dark-mode fieldset {
 
 .structure-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
@@ -52,7 +53,7 @@ body.dark-mode .structure-row:hover {
 }
 
 .structure-row input[type="text"] {
-  flex: 1;
+  flex: 1 1 200px;
   padding: 6px 10px;
   background: #f0f0f0;
   border: 1px solid #ccc;
@@ -68,7 +69,7 @@ body.dark-mode .structure-row input[type="text"] {
 }
 
 .structure-row select {
-  flex: 2;
+  flex: 2 1 300px;
   padding: 6px;
   border: 1px solid #bbb;
   border-radius: 4px;
@@ -110,21 +111,40 @@ body.dark-mode textarea {
   border-color: #555;
 }
 
-button {
+.tab-buttons {
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.tab-buttons button {
+  flex: 1;
+  white-space: nowrap;
   background-color: #007acc;
   color: white;
   border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
   cursor: pointer;
-  margin-right: 10px;
-  font-size: 16px;
   transition: background 0.3s ease;
 }
 
-button:hover {
+.tab-buttons button:hover {
   background-color: #005fa3;
+}
+
+.tab-buttons button.active {
+  background-color: #004f8c;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
 }
 
 pre {
@@ -162,4 +182,33 @@ option:hover {
 
 body.dark-mode option:hover {
   background-color: #333;
+}
+
+@media (max-width: 600px) {
+  .structure-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .structure-row input[type="text"],
+  .structure-row select {
+    flex: 1 1 100%;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+  }
+
+  .tab-buttons button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  fieldset {
+    padding: 15px;
+  }
+
+  pre {
+    font-size: 13px;
+  }
 }
