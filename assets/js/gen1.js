@@ -40,7 +40,7 @@ function generatePrompt() {
     metodeDetail = `${metode} (variabel: ${variabel}, sampel: ${sampel}, jumlah: ${jumlah})`;
   }
 
-  const prompt = `Buat artikel ilmiah IMRaD Bahasa Indonesia berjudul “${judul}”, metode ${metodeDetail}.\n` +
+  const prompt = `Buat artikel ilmiah IMRaD Bahasa Indonesia yang formal namun tetap mengalir dan alami seperti ditulis manusia berjudul “${judul}”, metode ${metodeDetail}.\n` +
                  `Gunakan literatur ≥2015 dari jurnal Scopus/SINTA dan teori internasional (${teori}).\n` +
                  `Bahas strategi: ${strategi}.\n` +
                  `Akhiri dengan kesimpulan & rekomendasi. Sertakan ≥5 referensi ilmiah.`;
