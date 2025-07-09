@@ -1,0 +1,117 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  h1, h2 {
+    color: #222;
+    text-align: center;
+  }
+  
+  fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .structure-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  
+  .structure-row:hover {
+    background-color: #eef6ff;
+  }
+  
+  .structure-row input[type="text"] {
+    flex: 1;
+    padding: 6px 10px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .structure-row select {
+    flex: 2;
+    padding: 6px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background: white;
+    transition: border-color 0.3s ease;
+    height: auto;
+  }
+  
+  .structure-row select[multiple] {
+    height: 130px;
+    overflow-y: auto;
+  }
+  
+  .structure-row select:focus {
+    border-color: #007acc;
+    outline: none;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: monospace;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    background-color: #fffefc;
+  }
+  
+  button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  
+  pre {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 15px;
+    white-space: pre-wrap;
+    border-radius: 6px;
+    margin-top: 15px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  optgroup {
+    font-weight: bold;
+    font-style: normal;
+    color: #444;
+  }
+  
+  option {
+    padding: 2px 6px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generator AI Music</title>
+  <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+
+  <h1>🎵 Generator AI Music</h1>
+
+  <fieldset>
+    <legend><strong>Struktur Lagu & Style</strong></legend>
+    <div id="structureInputs"></div>
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Lirik Lagu</strong></legend>
+    <textarea id="lyricsInput" rows="10" placeholder="[Verse 1]\nLirik di sini..."></textarea>
+    <br>
+    <button onclick="generateTaggedLyrics()">Generate Lirik Bertag</button>
+    <button onclick="copyOutput()">Copy Output</button>
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Output</strong></legend>
+    <pre id="output">[Verse 1 - Rebellious, 808 Bass]
+Lirik kamu akan muncul di sini...</pre>
+  </fieldset>
+
+  <script src="assets/js/gen2.js"></script>
+</body>
+</html>
