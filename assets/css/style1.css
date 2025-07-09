@@ -1,53 +1,112 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    padding: 2rem;
-  }
-  .container {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 700px;
-    margin: auto;
-  }
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  label {
-    display: block;
-    margin-top: 1rem;
-    font-weight: bold;
-  }
-  input[type="text"], textarea, select {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  button {
-    margin-top: 1rem;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .copy-btn {
-    background-color: #2196F3;
-    margin-left: 1rem;
-  }
-  pre {
-    background: #eee;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 2rem;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input[type="text"], textarea, select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 0.9rem;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.copy-btn {
+  background-color: #2196F3;
+}
+
+pre {
+  background: #eee;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  white-space: pre-wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  body {
     padding: 1rem;
-    margin-top: 1.5rem;
-    border-radius: 5px;
-    white-space: pre-wrap;
   }
-  .hidden {
-    display: none;
+
+  .container {
+    padding: 1.5rem 1rem;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
   }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  label {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  input[type="text"], textarea, select {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  pre {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+}
