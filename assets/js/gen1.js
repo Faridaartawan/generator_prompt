@@ -56,3 +56,19 @@ function copyToClipboard() {
     alert("Gagal menyalin prompt.");
   });
 }
+
+// === Theme Toggle ===
+const toggle = document.getElementById("themeToggle");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const savedTheme = localStorage.getItem("theme");
+
+// Apply theme on load
+document.body.classList.add(savedTheme || (prefersDark ? "dark" : "light"));
+toggle.checked = document.body.classList.contains("dark");
+
+// Handle toggle
+toggle.addEventListener("change", () => {
+  document.body.classList.toggle("dark", toggle.checked);
+  document.body.classList.toggle("light", !toggle.checked);
+  localStorage.setItem("theme", toggle.checked ? "dark" : "light");
+});
